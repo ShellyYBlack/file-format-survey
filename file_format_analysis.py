@@ -28,9 +28,9 @@ df2.to_csv('/Users/syblack/Desktop/df2.csv', index=False)
 df = pd.concat([df1, df2], ignore_index=True, sort=False)
 #print(df.columns.tolist())
 # Save file format counts to CSV
-#(df['format'].value_counts().to_csv('/Users/syblack/Desktop/file_format_counts.csv', index=True, header=True))
+(df['format'].value_counts().to_csv('/Users/syblack/Desktop/file_format_counts.csv', index=True, header=True))
 
 # Make a simple plot by adding .plot() to DataFrame
-# ax = df['format'].value_counts().plot(kind='pie', figsize=(20, 20), title='File Formats')
-# plt.tight_layout()
-# ax.figure.savefig('/Users/syblack/Desktop/file_formats_pie.pdf')
+ax = df['format'].value_counts().plot(kind='pie', figsize=(20, 20), title='File Formats')
+plt.tight_layout()
+ax.figure.savefig('/Users/syblack/Desktop/file_formats_pie.pdf')
