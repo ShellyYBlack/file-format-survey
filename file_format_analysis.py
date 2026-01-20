@@ -5,7 +5,7 @@ from pathlib import Path
 
 # Recursively find all siegfried.csv and add their full paths to list
 all_csv = []
-for path in Path('/Users/syblack/Desktop/sf_fits').rglob('*siegfried.csv'):
+for path in Path('$HOME/sf_fits').rglob('*siegfried.csv'):
     all_csv.append(str(path))
 #print(all_csv)
 
